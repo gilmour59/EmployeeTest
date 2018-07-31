@@ -81,6 +81,27 @@
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\employeeInfoEDM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employeeInfoEDM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\employeeInfoEDM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employeeInfoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\employeeInfoEDM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employeeInfoEDM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\employee_info.cs">
+      <DependentUpon>employeeInfoEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\test_table.cs">
+      <DependentUpon>employeeInfoEDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EmpAddEditForm.resx">
@@ -98,6 +119,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Model\employeeInfoEDM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>employeeInfoEDM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\employeeInfoEDM.edmx.diagram">
+      <DependentUpon>employeeInfoEDM.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\EmployeeTest.Model.employee_info.datasource" />
     <None Include="Properties\Settings.settings">
@@ -113,8 +141,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Model\" />
+    <Content Include="Model\employeeInfoEDM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>employeeInfoEDM.edmx</DependentUpon>
+      <LastGenOutput>employeeInfoEDM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\employeeInfoEDM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>employeeInfoEDM.edmx</DependentUpon>
+      <LastGenOutput>employeeInfoEDM.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
