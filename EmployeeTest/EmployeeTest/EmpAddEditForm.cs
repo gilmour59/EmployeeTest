@@ -44,9 +44,6 @@ namespace EmployeeTest
 
                 employee_info ei = employeeinfoBindingSource.Current as employee_info;
 
-                MessageBox.Show(dateTimePickerDOB.Value.ToString());
-                MessageBox.Show(dateTimePickerDOB.Text);
-
                 if (string.IsNullOrEmpty(textBoxFirstName.Text))
                 {
                     MessageBox.Show("Please Enter First Name!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -86,10 +83,12 @@ namespace EmployeeTest
                 if (IsNew)
                 {
                     EmployeeInfoServices.Insert(ei);
+                    MessageBox.Show("Added!");
                 }
                 else
                 {
                     EmployeeInfoServices.Update(employeeinfoBindingSource.Current as employee_info);
+                    MessageBox.Show("Saved!");
                 }
             }
         }
