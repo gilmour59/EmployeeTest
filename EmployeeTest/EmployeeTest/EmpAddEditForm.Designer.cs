@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
@@ -38,8 +37,6 @@
             this.textBoxContactNumber = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
-            this.employeeinfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.employeeinfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -63,7 +60,6 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeinfoBindingSource, "firstname", true));
             this.textBoxFirstName.Location = new System.Drawing.Point(125, 43);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(143, 20);
@@ -80,7 +76,6 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeinfoBindingSource, "lastname", true));
             this.textBoxLastName.Location = new System.Drawing.Point(125, 74);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(143, 20);
@@ -97,7 +92,6 @@
             // 
             // textBoxContactNumber
             // 
-            this.textBoxContactNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeinfoBindingSource, "contactnumber", true));
             this.textBoxContactNumber.Location = new System.Drawing.Point(125, 106);
             this.textBoxContactNumber.Name = "textBoxContactNumber";
             this.textBoxContactNumber.Size = new System.Drawing.Size(143, 20);
@@ -115,17 +109,12 @@
             // dateTimePickerDOB
             // 
             this.dateTimePickerDOB.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerDOB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeinfoBindingSource, "birthdate", true));
             this.dateTimePickerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerDOB.Location = new System.Drawing.Point(125, 136);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
             this.dateTimePickerDOB.Size = new System.Drawing.Size(99, 20);
             this.dateTimePickerDOB.TabIndex = 3;
             this.dateTimePickerDOB.Value = new System.DateTime(2018, 7, 8, 20, 34, 35, 0);
-            // 
-            // employeeinfoBindingSource
-            // 
-            this.employeeinfoBindingSource.DataSource = typeof(EmployeeTest.Model.employee_info);
             // 
             // EmpAddEditForm
             // 
@@ -149,7 +138,6 @@
             this.Text = "Add/Edit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EmpAddEditForm_FormClosing);
             this.Load += new System.EventHandler(this.EmpAddEditForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.employeeinfoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +154,5 @@
         private System.Windows.Forms.TextBox textBoxContactNumber;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
-        private System.Windows.Forms.BindingSource employeeinfoBindingSource;
     }
 }
