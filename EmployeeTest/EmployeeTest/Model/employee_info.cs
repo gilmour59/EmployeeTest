@@ -17,7 +17,7 @@ namespace EmployeeTest.Model
         public int empID { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
-        public Nullable<long> contactnumber { get; set; }
+        public string contactnumber { get; set; }
         public Nullable<System.DateTime> birthdate { get; set; }
     }
 }

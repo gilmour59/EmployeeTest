@@ -26,6 +26,5 @@ namespace EmployeeTest.Model
         }
     
         public virtual DbSet<employee_info> employee_info { get; set; }
-        public virtual DbSet<test_table> test_table { get; set; }
     }
 }

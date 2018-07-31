@@ -12,19 +12,11 @@
           <Property Name="empID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="firstname" Type="varchar" MaxLength="45" />
           <Property Name="lastname" Type="varchar" MaxLength="45" />
-          <Property Name="contactnumber" Type="bigint" />
+          <Property Name="contactnumber" Type="varchar" MaxLength="11" />
           <Property Name="birthdate" Type="date" />
-        </EntityType>
-        <EntityType Name="test_table">
-          <Key>
-            <PropertyRef Name="test_tableID" />
-          </Key>
-          <Property Name="test_tableID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="test" Type="varchar" MaxLength="45" />
         </EntityType>
         <EntityContainer Name="dbemployeeModelStoreContainer">
           <EntitySet Name="employee_info" EntityType="Self.employee_info" Schema="dbemployee" store:Type="Tables" />
-          <EntitySet Name="test_table" EntityType="Self.test_table" Schema="dbemployee" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -38,19 +30,11 @@
           <Property Name="empID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="firstname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="lastname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="contactnumber" Type="Int64" />
+          <Property Name="contactnumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="birthdate" Type="DateTime" />
-        </EntityType>
-        <EntityType Name="test_table">
-          <Key>
-            <PropertyRef Name="test_tableID" />
-          </Key>
-          <Property Name="test_tableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="test" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="dbemployeeEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="employee_info" EntityType="Self.employee_info" />
-          <EntitySet Name="test_table" EntityType="Self.test_table" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -66,14 +50,6 @@
                 <ScalarProperty Name="lastname" ColumnName="lastname" />
                 <ScalarProperty Name="contactnumber" ColumnName="contactnumber" />
                 <ScalarProperty Name="birthdate" ColumnName="birthdate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="test_table">
-            <EntityTypeMapping TypeName="dbemployeeModel.test_table">
-              <MappingFragment StoreEntitySet="test_table">
-                <ScalarProperty Name="test_tableID" ColumnName="test_tableID" />
-                <ScalarProperty Name="test" ColumnName="test" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
